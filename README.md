@@ -1,6 +1,6 @@
 # Sinatra Bootstrap
 
-Backbone, API Stub, Sinatra, HAML, SASS, Coffeescript, jQuery, Underscore, Sprockets, Asset Packaging, Heroku, Pry
+Backbone, API Stub, Sinatra, HAML, SASS, Compass, Coffeescript, jQuery, Underscore, Sprockets, Asset Packaging, Heroku, Pry
 
 # Instructions
 
