@@ -1,4 +1,5 @@
 $:.unshift File.expand_path("../", __FILE__)
+require 'compass'
 require 'sinatra'
 require 'haml'
 require 'sass'
@@ -8,6 +9,10 @@ require "yui/compressor"
 
 require "./lib/api"
 require "application"
+
+Sass::Engine::DEFAULT_OPTIONS[:load_paths].tap do |load_paths|
+  load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
+end
 
 map '/assets' do
   environment = Sprockets::Environment.new
