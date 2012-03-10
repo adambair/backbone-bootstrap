@@ -2,13 +2,41 @@
 %html{ :lang => "en"}
   %head
     %title= "Backbone Bootstrap"
+    %link{ :charset => "utf-8", :href => "/assets/vendor/bootstrap.css", 
+           :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %link{ :charset => "utf-8", :href => "/assets/vendor/bootstrap-responsive.css", 
+           :media => "screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :charset => "utf-8", :href => "/assets/application.css", 
            :media => "screen", :rel => "stylesheet", :type => "text/css" }
-  %body
-    %header
-      %h1 Backbone Bootstrap
 
-    %section{:id => 'debug'}
-      %p Backbone, API Stub, Sinatra, HAML, SASS, Compass, Coffeescript, jQuery, Underscore, Sprockets, Asset Packaging, Heroku
- 
-    %script{:type => "text/javascript", :src  => "assets/application.js"}
+  %body
+
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{'data-toggle' => "collapse", 'data-target' => ".nav-collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+          %a.brand Backbone Bootstrap
+          
+          .nav-collapse
+            %ul.nav
+              %li.active
+                %a{:href => '#'} Home
+              %li
+                %a{:href => '#about'} About
+              %li
+                %a{:href => '#contact'} Contact
+  
+    .container
+      .hero-unit
+        %h1 This is Backbone-Bootstrap
+        %p{:class => 'debug'} Backbone, Sinatra, Twitter Bootstrap, HAML, SASS, Compass, Coffeescript, jQuery, Underscore, Sprockets, Asset Packaging, Heroku
+        
+        
+  %script{:type => "text/javascript", :src  => "assets/application.js"}
+        
+
+
