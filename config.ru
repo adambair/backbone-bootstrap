@@ -1,11 +1,9 @@
+require "rubygems"
+require "bundler"
+Bundler.setup
+Bundler.require
+
 $:.unshift File.expand_path("../", __FILE__)
-require 'compass'
-require 'sinatra'
-require 'haml'
-require 'sass'
-require 'sprockets'
-require 'uglifier'
-require "yui/compressor"
 
 require "./lib/api"
 require "application"
